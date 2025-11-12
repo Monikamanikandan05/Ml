@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>AI Traffic Sign Recognition — Driving Assistant</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@4.12.0/dist/tf.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app">
+    <div class="card">
+      <h1>AI Traffic Sign Recognition — Live Camera</h1>
+      <div class="video-wrap">
+        <video id="webcam" autoplay playsinline muted></video>
+        <canvas id="overlay"></canvas>
+        <div class="overlay-label">Model: <span id="modelName">(not loaded)</span></div>
+      </div>
+      <div class="controls">
+        <button id="startBtn" class="primary">Start Camera</button>
+        <button id="stopBtn">Stop Camera</button>
+        <input id="fileInput" type="file" accept="image/*">
+      </div>
+      <div class="metrics-row">
+        <div class="metric"><div class="muted">Last prediction</div><div id="lastPred">—</div></div>
+        <div class="metric"><div class="muted">Confidence</div><div id="lastConf">—</div></div>
+      </div>
+    </div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
